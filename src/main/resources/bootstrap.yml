@@ -1,8 +1,5 @@
 spring:
   application:
     name: personal-eureka-server
-  cloud:
-    config:
-      uri: http://localhost:8040/
   profiles:
     active: dev
