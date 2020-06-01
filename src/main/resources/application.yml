@@ -1,0 +1,15 @@
+server:
+  port: 8040
+  servlet:
+    context-path: /${spring.application.name}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health, info"
+
+eureka:
+  instance:
+    health-check-url: /actuator/health
+    status-page-url: /actuator/info
