@@ -29,3 +29,5 @@ build/
 
 ### VS Code ###
 .vscode/
+/src/main/appengine/personal-eureka-server.jar
+/src/main/appengine/.gcloudignore

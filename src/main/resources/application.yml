@@ -1,5 +1,12 @@
+spring:
+  cloud:
+    config:
+      enabled: false
+    service-registry:
+      auto-registration:
+        enabled: false
+
 server:
-  port: 8040
   servlet:
     context-path: /${spring.application.name}
 
@@ -7,9 +14,17 @@ management:
   endpoints:
     web:
       exposure:
-        include: "health, info"
+        include: health, info
+      base-path: /manage
 
 eureka:
-  instance:
-    health-check-url: /actuator/health
-    status-page-url: /actuator/info
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
